@@ -1,0 +1,292 @@
+*,
+*::before*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /*  COLORS  */
+  --background-1: #8e2489;
+  --background-2: #d4429a;
+  --background-3: #ea5c6f;
+  --book-Shef-color: #fff;
+  --book-Shef-back-Shadow: #d588bc;
+  --book-Shef-inner-Shadow-1: #6f6c88;
+  --book-Shef-inner-Shadow-2: #c0c1ce;
+  --book-Shef-outer-Shadow: #463053;
+  --books-color-1: #7ec4d3;
+  --books-color-2: #4293b9;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(
+    var(--background-3),
+    var(--background-2),
+    var(--background-1)
+  );
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-container .book-shef-outer {
+  width: 50%;
+  height: 50%;
+  background: var(--book-Shef-back-Shadow);
+  border-radius: 10px 10px 0 0;
+  -webkit-box-reflect: below 0px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  transform: skewy(-2deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 999999999;
+  box-shadow: -5px 5px 5px #00000069;
+}
+
+.main-container .book-shef-back {
+  width: 5%;
+  height: 40%;
+  background: #463053;
+  position: relative;
+  top: -4.4%;
+  left: -0.5%;
+  transform: skewy(25deg);
+  border-radius: 0px 20px 0 0;
+  -webkit-box-reflect: below 0px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+}
+
+.main-container .book-shef-back::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #463053;
+  top: 17.8%;
+  left: 0.5%;
+  transform: skewy(-40deg);
+  border-radius: 0px 0px 0 5px;
+  box-shadow: -5px 5px 5px #00000069;
+}
+
+.main-container .book-shef-outer::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 0;
+  width: 2.5%;
+  height: 95%;
+  background: var(--book-Shef-back-Shadow);
+  z-index: 999999999;
+}
+
+.main-container .book-shef-outer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2.5%;
+  background: var(--book-Shef-back-Shadow);
+  z-index: 999;
+}
+
+.main-container .book-shef-outer .book-shef-inner-1 {
+  width: 95%;
+  height: 95%;
+  background: linear-gradient(
+    90deg,
+    #46305368,
+    var(--book-Shef-inner-Shadow-1) 100%
+  );
+  border-radius: 10px 10px 0 0;
+  box-shadow: inset 7px 5px 20px 5px #00000085;
+  position: relative;
+}
+
+.main-container .book-shef-outer .book-shef-inner-1::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  width: 4%;
+  height: 2%;
+  background: #bcbcc0;
+  transform: skewy(-10deg);
+}
+
+.main-container .book-shef-outer .book-shef-inner-1::after {
+  content: "";
+  position: absolute;
+  top: 49.4%;
+  width: 4%;
+  height: 2%;
+  background: #bcbcc0;
+  transform: skewy(-10deg);
+}
+
+.main-container .book-shef-outer .book-shef-inner-2 {
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  top: 6%;
+  left: 7%;
+  background: linear-gradient(
+    90deg,
+    #46305368,
+    var(--book-Shef-inner-Shadow-1) 100%
+  );
+  border-radius: 3px 0 0 0;
+}
+
+.main-container .book-shef-outer .book-shef-inner-2::before {
+  content: "";
+  position: absolute;
+  top: 71.9%;
+  left: -4.8%;
+  width: 4%;
+  height: 2%;
+  background: #bcbcc0;
+  transform: skewy(-10deg);
+}
+
+.main-container .book-shef-outer .book-shef-inner-2::after {
+  content: "";
+  position: absolute;
+  top: 95.5%;
+  left: -4.8%;
+  width: 4%;
+  height: 2%;
+  background: #bcbcc0;
+  transform: skewy(-10deg);
+}
+
+.main-container .book-shef-outer .books-1 {
+  width: 100%;
+  height: 700px;
+  z-index: 999;
+  position: absolute;
+  top: 8%;
+  left: 4%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container .book-shef-outer .books-1 .item {
+  width: 3%;
+  height: 100%;
+  border: 1px solid #0d506f;
+  border-radius: 5px;
+  height: 10%;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(
+    180deg,
+    var(--books-color-1),
+    var(--books-color-2)
+  );
+  box-shadow: -1px -1px 5px #00000086;
+}
+
+
+
+.main-container .book-shef-outer .books-1 .item::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  width: 3%;
+  height: 100%;
+  border: 1px solid #0d506f;
+  border-radius: 3px;
+  height: 10%;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(
+    180deg,
+    var(--books-color-1),
+    var(--books-color-2)
+  );
+  box-shadow: -1px -1px 5px #00000086;
+}
+
+.main-container .book-shef-outer .books-1 .item::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  width: 3%;
+  border: 1px solid #0d506f;
+  border-radius: 5px;
+  height: 10%;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(
+    180deg,
+    var(--books-color-1),
+    var(--books-color-2)
+  );
+  box-shadow: -1px -1px 5px #00000086;
+}
+
+.main-container .book-shef-outer > .books-2 {
+  width: 100%;
+  height: 700px;
+  z-index: 999;
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container .book-shef-outer .books-2 .item {
+  position: relative;
+  top: 46%;
+  width: 3%;
+  height: 10%;
+  border: 1px solid #0d506f;
+  border-radius: 3px;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(
+    180deg,
+    var(--books-color-1),
+    var(--books-color-2)
+  );
+  box-shadow: -1px -1px 5px #00000086;
+}
+
+.main-container .book-shef-outer .ground-1 {
+  width: 100%;
+  height: 2%;
+  background: var(--book-Shef-back-Shadow);
+  position: absolute;
+  top: 25%;
+  z-index: 999999;
+}
+
+.main-container .book-shef-outer .ground-2 {
+  background: var(--book-Shef-back-Shadow);
+  width: 100%;
+  height: 2%;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  z-index: 999999;
+}
+
+.main-container .book-shef-outer .ground-3 {
+  background: var(--book-Shef-back-Shadow);
+  width: 100%;
+  height: 2%;
+  z-index: 1;
+  position: absolute;
+  top: 75%;
+  z-index: 999999;
+}
